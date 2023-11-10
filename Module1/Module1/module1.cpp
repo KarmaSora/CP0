@@ -33,7 +33,7 @@ int main() {
 	sumOfGrades = new int[maxNrOfIceCream] {0};
 
 	//inputIceCream(iceCreams, nrOfIceCream);
-	//ersatt ed att l‰sa fil
+	//ersatt ed att l√§sa fil
 	if (readIceCreamsFromFile(maxNrOfIceCream, iceCreams, nrOfIceCream)) {
 
 	
