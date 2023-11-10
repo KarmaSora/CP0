@@ -1,2 +1,0 @@
-﻿module1.obj : error LNK2005: main already defined in FirstTest.obj
-C:\Users\karam\source\repos\OOP_C++\Module1\x64\Debug\Module1.exe : fatal error LNK1169: one or more multiply defined symbols found
