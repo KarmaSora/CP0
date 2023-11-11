@@ -1,22 +1,76 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
+# Compiled files
+*.com
+*.class
 *.dll
-
-# Executables
 *.exe
-*.out
-*.app
+*.o
+*.so
+*.ko
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.tlog
+*.tlog/
+*.suo
+*.log
+*.dat
+*.manifest
+*.res
+*.exp
+*.pdb
+*.ilk
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
 
-# Generated files
-_gen/
+# Build directories
+bin/
+build/
+lib/
+out/
 
-# OS generated files
+# IDE-specific files
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln.docstates
+
+# Dependency directories
+__pycache__/
+node_modules/
+jspm_packages/
+
+# Package files
+*.tar
+*.gz
+*.bz2
+*.zip
+*.rar
+*.7z
+
+# Debug information
+*.dSYM/
+*.su/
+*.idb/
+*.pdb/
+*.ilk/
+*.mdmp
+*.cachefile
+
+# Compiled Python files
+*.pyc
+*.pyo
+
+# Miscellaneous
 .DS_Store
 Thumbs.db
+ehthumbs.db
+Desktop.ini
