@@ -1,0 +1,5 @@
+*.obj
+/x64
+*.exe
+/enc_temp_folder
+/.vs
