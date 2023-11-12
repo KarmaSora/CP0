@@ -60,8 +60,8 @@ int main() {
 
 	}
 
-	delete[] iceCreams;
 	delete[] sumOfGrades;
+	delete[] iceCreams;
 
 	return 0;
 }

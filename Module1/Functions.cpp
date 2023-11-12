@@ -99,14 +99,18 @@ bool readIceCreamsFromFile(int maxNumberOf, string* iceCreams, int& nrOfIceCream
 	bool didRead = false;
 	ifstream inFile;
 
-	
+
 	inFile.open(fileName);
 	if (inFile.is_open()){
 		inFile >> nrOfIceCream;
+		//cout << "nrOfIceCream1" << endl;
+
 		inFile.ignore();
-		for (int i = 1; i < maxNumberOf; i++) {
+		for (int i = 0; i < maxNumberOf; i++) {
 			getline(inFile, iceCreams[i]);
-			cout << nrOfIceCream << endl;
+			//cout << nrOfIceCream << endl;
+			//cout << "nrOfIceCream2" << endl;
+
 
 		}
 		didRead = true;
