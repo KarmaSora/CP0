@@ -74,3 +74,10 @@ jspm_packages/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+
+*.obj
+/x64
+*.exe
+/enc_temp_folder
+/.vs
