@@ -1,76 +1,39 @@
-# Compiled files
-*.com
-*.class
-*.dll
-*.exe
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
 *.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
 *.so
-*.ko
-*.pyc
-*.pyo
-*.pyd
-*.db
-*.sqlite
-*.sqlite3
-*.log
-*.tlog
-*.tlog/
-*.suo
-*.log
-*.dat
-*.manifest
-*.res
-*.exp
-*.pdb
-*.ilk
-*.aps
-*.ncb
-*.opendb
-*.opensdf
-*.sdf
-*.cachefile
+*.dylib
+*.dll
 
-# Build directories
-bin/
-build/
-lib/
-out/
+# Fortran module files
+*.mod
+*.smod
 
-# IDE-specific files
-.vscode/
-.idea/
-*.suo
-*.user
-*.sln.docstates
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
 
-# Dependency directories
-__pycache__/
-node_modules/
-jspm_packages/
+# Executables
+*.exe
+*.out
+*.app
 
-# Package files
-*.tar
-*.gz
-*.bz2
-*.zip
-*.rar
-*.7z
-
-# Debug information
-*.dSYM/
-*.su/
-*.idb/
-*.pdb/
-*.ilk/
-*.mdmp
-*.cachefile
-
-# Compiled Python files
-*.pyc
-*.pyo
-
-# Miscellaneous
-.DS_Store
-Thumbs.db
-ehthumbs.db
-Desktop.ini
+*.sln
+*.obj
+x64/
+*.exe
+enc_temp_folder/
+.vs/
