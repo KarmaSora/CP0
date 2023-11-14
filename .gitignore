@@ -31,15 +31,6 @@
 *.out
 *.app
 
-<<<<<<< HEAD
 x64/
 .vs/
 
-=======
-
-*.obj
-x64/
-*.exe
-enc_temp_folder/
-.vs/
->>>>>>> 79c088ecd2a25ba65e0fd6d0326494058d0ca49a
