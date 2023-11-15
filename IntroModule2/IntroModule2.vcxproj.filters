@@ -21,9 +21,24 @@
     <ClCompile Include="ClassA.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mainDice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiceCan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClassA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiceCan.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
