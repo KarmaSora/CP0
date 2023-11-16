@@ -14,15 +14,19 @@ private:
 	float height; 
 
 public:
-	Buddy(string name, int age, float height );//konstructor
+	Buddy(const string &name, int age, float height );//konstructor
 	Buddy();//Defult consturctor, aka No arguments cosntructor
-	//~Buddy();//destruktor
+
+	~Buddy();//destruktor
 
 
-	float getHeight();
+	float getHeight() const; // konstant medlemsfunction, kan inte ändra objectet
 	void setHeight(float height);
 
-	string toString();
+
+	void setName(const string &name);
+	void setAge(int& age);
+	string toString() const;
 	void growOlder();
 
 

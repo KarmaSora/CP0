@@ -21,6 +21,9 @@
     <ClCompile Include="Buddy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BuddyAndPointerTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Buddy.h">
