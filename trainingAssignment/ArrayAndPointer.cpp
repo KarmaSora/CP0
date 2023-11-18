@@ -28,24 +28,8 @@ int calcVocalsInStirng(string& text) {
 	return count;
 }
 
-//int calcNumUnder500() {
-//
-//	cout << "enter the size of wanted list..>" << endl;
-//	int numberOfElements;
-//	cin >> numberOfElements;
-//	cout << numberOfElements << endl;
-//
-//}
 
-
-
-
-int main() {
-	/*string a = "this text has 4 spaces!";
-	calcSpacesInString(a);*/
-
-	/*string b = "kkeKe aKe 8 kokakk MMeMMMme";
-	calcVocalsInStirng(b);*/
+void zeroTenShuffle() {
 
 	srand(time(NULL));
 	string* stringArray = new string[10];
@@ -60,7 +44,10 @@ int main() {
 	stringArray[8] = "Eight";
 	stringArray[9] = "Nine";
 
-	
+	cout << "\nOriginal content of the array: \n";
+	for (int i = 0; i < 10; ++i) {
+		cout << stringArray[i] << " ";
+	}
 
 	for (int i = 0; i < 10; ++i) {
 		int index1 = rand() % 10;
@@ -69,7 +56,7 @@ int main() {
 	}
 
 	// Print the contents of the array
-	cout << "Shuffled content of the array: ";
+	cout << "\nShuffled content of the array: \n";
 	for (int i = 0; i < 10; ++i) {
 		cout << stringArray[i] << " ";
 	}
@@ -78,8 +65,56 @@ int main() {
 	// Deallocate the memory on the heap
 	delete[] stringArray;
 
+}
 
-	//calcNumUnder500();
+void calcNumUnder500() {
+	srand(time(NULL));
+
+	cout << "enter the size of wanted list..>" << endl;
+	int numberOfElements;
+	cin >> numberOfElements;
+	//to check variable data type...
+	//cout <<"the number you entered was.." << typeid(numberOfElements).name() << endl; 
+	cout << "the number you entered was.." << numberOfElements << endl;
+
+	int* arrInt = new int[numberOfElements];
+	int  underLimit = 0;
+	for (int i = 0; i < numberOfElements; i++) {
+		arrInt[i] = rand() % 1000 ;
+		if (arrInt[i] < 500)
+			underLimit++;
+
+	}
+
+	for (int i = 0; i < numberOfElements; i++) {
+		cout << arrInt[i] << endl;
+	}
+	cout << "there are :" << underLimit<<" elements under 500" << endl;
+
+	delete[] arrInt;
+
+}
+
+
+
+
+int main() {
+	/*string a = "this text has 4 spaces!";
+	calcSpacesInString(a);*/
+
+	/*string b = "kkeKe aKe 8 kokakk MMeMMMme";
+	calcVocalsInStirng(b);*/
+
+	/*
+	zeroTenShuffle();
+	*/
+
+
+	/*
+	calcNumUnder500();
+	*/
+
+
 
 	return 0;
 }
