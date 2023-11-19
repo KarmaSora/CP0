@@ -95,7 +95,32 @@ void calcNumUnder500() {
 
 }
 
+void personIDFun(string *&personID, int *&birthDArr, int numberOfElements) {
 
+	birthDArr = new int[numberOfElements];
+	personID = new string[numberOfElements];
+
+	for (int i = 0; i < numberOfElements; i++) {
+
+		string name;
+		cout << "enter a name..\n";
+		cin.ignore();
+		getline(cin, name);
+
+		int age;
+		cout << "enter the age ..\n";
+		cin >> age;
+
+		birthDArr[i] = age;
+		personID[i] = name;
+	}
+
+	for (int k = 0; k < numberOfElements; k++) {
+		cout << "the name is.. " << personID[k] << endl;
+		cout << "the age is " << birthDArr[k] << endl;
+	}  
+	
+}
 
 
 int main() {
@@ -114,6 +139,23 @@ int main() {
 	calcNumUnder500();
 	*/
 
+
+	
+	cout << "enter the size of wanted list..>" << endl;
+	int numberOfElements;
+	cin >> numberOfElements;
+	//to check variable data type...
+	//cout <<"the number you entered was.." << typeid(numberOfElements).name() << endl; 
+	cout << "the number you entered was.." << numberOfElements << endl;
+	int* birthDArr = nullptr;
+	string* personID = nullptr;
+
+	personIDFun(personID, birthDArr, numberOfElements);
+	cout << birthDArr << endl;
+		cout << personID << endl;
+
+	delete[] birthDArr;
+	delete[] personID;
 
 
 	return 0;
