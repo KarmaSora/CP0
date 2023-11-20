@@ -33,18 +33,39 @@
     <ClCompile Include="FIleMangement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ProMod1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="catch_amalgamated.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ProFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="karma.txt">
-      <Filter>Source Files</Filter>
-    </Text>
     <Text Include="testing.txt">
-      <Filter>Source Files</Filter>
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="karma.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="ProExample.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="ProShort.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="ProLong.txt">
+      <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
 </Project>
