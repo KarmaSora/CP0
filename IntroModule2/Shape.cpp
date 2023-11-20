@@ -1,113 +1,119 @@
-#include <iostream>
 #include "Shape.h"
+#include <iostream>
+
+using namespace std;
+
+int Shape::idCounter = 0; // static variable initialization
 
 
-int Shape::idCounter = 0; //static variable initialization
-Shape::Shape() 
-	: type(Type::Rectangle), id(Shape::idCounter++),
-	subShapes(nullptr), subShapeCapacity(0), subShapesCount(0)
+Shape::Shape() : type(Type::Rectangle), id(Shape::idCounter++),
+	subShapes(nullptr), subShapesCount(0), subShapesCapacity(0)
 {
-	std::cout<< "Shape::Shape()" << std::endl;
+	cout << "Shape::Shape()" << endl;
 }
 
 Shape::~Shape()
 {
-	std::cout << "destructing.. [" << this->id<<"]" << std::endl;
-	if (this->subShapes) {
-
-		for (int i = 0; i < this->subShapesCount; i++) {
+	cout << "Shape::~Shape() [" << this->id << "]" << endl;
+	if (this->subShapes)
+	{
+		for (int i = 0; i < this->subShapesCount; i++)
+		{
 			delete subShapes[i];
 		}
 		delete[] subShapes;
 	}
-
-
 }
 
-Shape::Shape(Type type)  : Shape()
-	//: type(type)
+Shape::Shape(Type type) : Shape()
+//	type(type)
 {
 	this->type = type;
-	std::cout << "Shape::Shape(Type type) " << std::endl;
-
+	cout << "Shape::Shape(Type type)" << endl;
 }
 
- Shape::Shape(const Shape& other)
-	 :type(other.type), id(Shape::idCounter++), 
-	 subShapesCount(other.subShapesCount), subShapeCapacity(other.subShapeCapacity), subShapes(nullptr)
+
+Shape::Shape(const Shape& other) : type(other.type), id(Shape::idCounter++),
+	subShapesCount(other.subShapesCount), subShapesCapacity(other.subShapesCapacity), subShapes(nullptr)
 {
-	 std::cout << " Shape::Shape(const Shape& other)" << std::endl;
-	 if (other.subShapes) {
-		 this->subShapes = new Shape * [other.subShapeCapacity];
-		 for (int i = 0; i < subShapesCount; i++) {
-			 this->subShapes[i] = other.subShapes[i];
-		 }
-	 }
-
-}
-
-Shape::Shape()
-{
-	std::cout << " Shape::Shape()" << std::endl;
-
-}
-
-void Shape::operator=(const Shape& other)
-{
-	std::cout << "Shape :: operator = " << std::endl;
-	
-	if(this != &other){
-
-	this->type = other.type;
+	cout << "Shape::Shape(const Shape& other)" << endl;
+	if (other.subShapes)
+	{
+		this->subShapes = new Shape* [other.subShapesCapacity];
+		for (int i = 0; i < this->subShapesCount; i++)
+		{
+			this->subShapes[i] = new Shape(*other.subShapes[i]);
+		}
 	}
-}
-
-Shape::Shape(const Shape &other)
-	: type(other.type)
-{
 }
 
 void Shape::draw()
 {
-	//if (this->type == Type::Rectangle) {
-	//	std::cout << "Rectangle" << std::endl;
-
-	//}
-
-
 	switch (this->type)
 	{
-	case Type::Rectangle :
-		std::cout << "Rectangle [" <<this->id <<"]" << std::endl;
-		break;
-	case Type::Circle:
-		std::cout << "Circle" << std::endl;
+	case Type::Rectangle:
+		cout << "Rectangle[" << this->id << "]" << endl;
 		break;
 	case Type::Square:
-		std::cout << "Suqare" << std::endl;
+		cout << "Square[" << this->id << "]" << endl;
 		break;
-
-		if (this->subShapesCount > 0) {
-			std::cout << "subShapeCount\n";
-
-			for (int i = 0; this->subShapesCount; i++) {
-				subShapes[i]->draw();
-			}
-			std::cout << "subShapeCount\n";
-
+	case Type::Circle:
+		cout << "Circle[" << this->id << "]" << endl;
+		break;
+	}
+	if (this->subShapesCount > 0)
+	{
+		cout << "Subshapes-->" << endl;
+		for (int i = 0; i < this->subShapesCount; i++)
+		{
+			subShapes[i]->draw();
 		}
+		cout << "<--Subshapes:" << endl;
+	}
+}
 
+void Shape::operator=(const Shape& other)
+{
+	cout << "Shape::operator=" << endl;
+	if (this != &other)
+	{
+		// Delete existing array and content
+		for (int i = 0; i < this->subShapesCount; i++)
+		{
+			delete this->subShapes[i]; // Delete array content
+		}
+		delete [] this->subShapes; // Delete array
+
+		// Initiate from other
+		this->type = other.type;
+		this->subShapesCapacity = other.subShapesCapacity;
+		this->subShapesCount = other.subShapesCount;
+		//this->id = other.id;
+
+		// Create new array
+		this->subShapes = new Shape * [this->subShapesCapacity];
+
+		// Copy from other
+		for (int i = 0; i < this->subShapesCount; i++)
+		{
+			this->subShapes[i] = new Shape(*other.subShapes[i]);
+		}
+		// Null remaining
+		for (int i = this->subShapesCount; i < this->subShapesCapacity; i++)
+		{
+			this->subShapes[i] = nullptr;
+		}
 	}
 
 }
 
 void Shape::addSubShape(Shape* shape)
 {
-	if(this->subShapes == nullptr) {
-		this->subShapes = new Shape * [DEFULT_LIST_CAPACITY];
-		this->subShapeCapacity = DEFULT_LIST_CAPACITY;
+	if (this->subShapes == nullptr)
+	{
+		this->subShapes = new Shape* [DEFAULT_LIST_CAPACITY];
+		this->subShapesCapacity = DEFAULT_LIST_CAPACITY;
 		this->subShapesCount = 0;
 	}
-	this->subShapes[this->subShapesCount++] == shape;
-
+	this->subShapes[this->subShapesCount++] = shape;
 }
