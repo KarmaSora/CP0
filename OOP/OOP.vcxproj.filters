@@ -15,36 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ArrayAndPointer.cpp">
+    <ClCompile Include="OOP.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="selecItteration.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="variableDatatypUttryck.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Functioner.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProgExercise5.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FIleMangement.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="catch_amalgamated.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="karma.txt">
-      <Filter>Source Files</Filter>
-    </Text>
-    <Text Include="testing.txt">
-      <Filter>Source Files</Filter>
-    </Text>
   </ItemGroup>
 </Project>
