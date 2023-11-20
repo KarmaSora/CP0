@@ -12,27 +12,49 @@ int wordSorter(std::string originalFilePath, std::string shortWordsFilePath, std
 	//ofstream writeFile2;
 	writeFile2.open(longWordsFilePath);
 	if (writeFile.is_open() && writeFile2.is_open()){
-	
+
+
+		string appToLong;
+		int countOfLong = 0;
+		string appToShort;
+		int countOfShort = 0;
 
 		ifstream file;
 		file.open(originalFilePath);
 		if (file.is_open() ) {
+
 			string singleLine;
 			file>> singleLine;
+			file.ignore();
+
 			int elementCount = stoi(singleLine);
 			for (int i = 0; i < elementCount; i++) {
 
 				getline(file, singleLine);
+	
+		
+
 				if (singleLine.size() >= splitFromLine) {
-					writeFile2<<singleLine<<endl;
+					appToLong += singleLine + "\n";
+					countOfLong++;
+					//writeFile2<<singleLine<<endl;
 				}
 				else{
-					writeFile<< singleLine << endl;
+					appToShort += singleLine + "\n";
+					countOfShort++;
+					//writeFile<< singleLine << endl;
 				}
 				cout << singleLine << endl;
 			}
 			file.close();
 		}
+		writeFile2 << countOfLong<<endl;
+		writeFile2 << appToLong;
+
+		writeFile << countOfShort << endl;
+		writeFile << appToShort;
+
+
 
 		writeFile2.close();
 		writeFile.close();
