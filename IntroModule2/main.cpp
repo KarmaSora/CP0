@@ -1,18 +1,19 @@
-#include "ClassA.h"
 #include <iostream>
+#include "Shape.h"
+int main(){
+
+	Shape rect = Shape(Shape::Type::Rectangle);
+	rect.draw();
+
+	Shape circ = Shape(Shape::Type::Circle);
+	circ.draw();
+
+	Shape square = Shape(Shape::Type::Square);
+	square.draw();
+
+	Shape rectCopy = Shape(rect);
+	rectCopy.draw();
 
 
-int main()
-{
-    std::cout << "Hello World!\n";
-    ClassA a1;
-    a1.setName("kalle");
-    cout<< a1.getName()<< endl;
 
-    ClassA* a2 = new ClassA;
-    a2->setName("Pelle");
-    cout << a2->getName();
-
-    delete a2; //reme,ber to delete the allocated memmory.
-    //always delete things you use "new" on 
 }

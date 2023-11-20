@@ -2,10 +2,12 @@
 //
 
 #include <iostream>
-
+#include "Hero.h"
 int main()
 {
-    std::cout << "Hello World!\n";
+    Hero h;
+    h.getName();
+    std::cout << h.getName();;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
