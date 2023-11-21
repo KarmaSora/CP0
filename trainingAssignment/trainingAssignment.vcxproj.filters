@@ -33,9 +33,6 @@
     <ClCompile Include="FIleMangement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ProMod1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ProFunctions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
