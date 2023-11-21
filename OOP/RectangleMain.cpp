@@ -2,12 +2,16 @@
 //
 
 #include <iostream>
-#include "Hero.h"
+#include "Rectangle.h"
+
 int main()
 {
-    Hero h;
-    h.getName();
-    std::cout << h.getName();;
+	Rectangle rec;
+	Rectangle rec2(4.5, 6.5);
+
+	std:: cout << rec.circumference()<<std::endl;
+	std::cout << rec2.circumference() << std::endl;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
