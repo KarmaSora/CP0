@@ -38,7 +38,7 @@ void Buddy::setName(const string& name)
 	this->name = name;
 }
 
-void Buddy::setAge(int& age)
+void Buddy::setAge(int age)
 {
 	this->age = age;
 }
@@ -52,4 +52,31 @@ string Buddy::toString() const
 void Buddy::growOlder()
 {
 	this->age ++;
+}
+
+bool Buddy::operator==(const Buddy& leftHand) const
+{
+	bool reality = false;
+
+	if (this->name == leftHand.name && 
+		this->age == leftHand.age && 
+		this->height == leftHand.height)
+	{
+		reality = true;
+	}
+	/* alt : 
+	* return (this->name == leftHand.name && 
+		this->age == leftHand.age && 
+		this->height == leftHand.height);
+	
+	*/
+	return reality;
+}
+
+bool Buddy::operator<(const Buddy& leftHand) const
+{
+	bool isLessThan = false;
+	if (this->height < leftHand.height)
+		isLessThan = true;
+	return isLessThan;
 }

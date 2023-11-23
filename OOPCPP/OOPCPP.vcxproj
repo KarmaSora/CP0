@@ -129,14 +129,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Buddy.cpp" />
-    <ClCompile Include="BuddyAndPointerTest.cpp" />
+    <ClCompile Include="BuddyAndPointerTest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="BuddyBook.cpp" />
+    <ClCompile Include="BuddyBookMain.cpp" />
     <ClCompile Include="BuddyTest.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TestingOperatorOverloading.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Buddy.h" />
+    <ClInclude Include="BuddyBook.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

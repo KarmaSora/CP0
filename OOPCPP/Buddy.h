@@ -25,10 +25,14 @@ public:
 
 
 	void setName(const string &name);
-	void setAge(int& age);
+	void setAge(int age);
 	string toString() const;
 	void growOlder();
 
+	//operator overloading. Operator överlagring
+	bool operator ==(const Buddy& leftHand) const;
+
+	bool operator <(const Buddy& leftHand) const;
 
 };
 

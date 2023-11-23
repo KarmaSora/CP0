@@ -24,9 +24,21 @@
     <ClCompile Include="BuddyAndPointerTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TestingOperatorOverloading.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BuddyBook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BuddyBookMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Buddy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BuddyBook.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
