@@ -1,7 +1,7 @@
 #include "Card.h"
 
 Card::Card()
-    :value(3), color("red"), type("heart")
+    :value(3), color("Red"), type("Heart")
 {
 }
 
@@ -42,5 +42,5 @@ void Card::setType(std::string type)
 
 void Card::cardInfo()
 {
-    std::cout << "card";
+    std::cout << "card: "<<getType()<<" "<<getValue() << std::endl;
 }
