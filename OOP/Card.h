@@ -16,7 +16,7 @@ public:
 	void setColor(std::string color);
 	std::string getType() const;
 	void setType(std::string type);
-	void cardInfo();
+	std::string cardInfo();
 
 };
 

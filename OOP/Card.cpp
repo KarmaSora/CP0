@@ -1,4 +1,5 @@
 #include "Card.h"
+#include <string>
 
 Card::Card()
     :value(3), color("Red"), type("Heart")
@@ -40,7 +41,9 @@ void Card::setType(std::string type)
     this->type = type;
 }
 
-void Card::cardInfo()
+std::string Card::cardInfo()
 {
-    std::cout << "card: "<<getType()<<" "<<getValue() << std::endl;
+    //std::cout << "card: "<<getType()<<" "<<getValue() << std::endl;
+    return  "card: "+getType()+ " " + std::to_string(getValue()) + "\n";
+
 }
