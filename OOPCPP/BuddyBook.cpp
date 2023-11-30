@@ -28,6 +28,7 @@ BuddyBook::BuddyBook(BuddyBook& other)
 void BuddyBook::operator=(const BuddyBook& other)
 {
 	if(this != &other){ //self check, om "min/this" adress inte är samma som adressen till other 
+		//this  ger adressen till objectet    och det jämförs med adressen till other
 
 		for (int i = 0; i < this->currentNrOfBuddies; i++) {
 			delete this->buddies[i]; //avallokerar objekten

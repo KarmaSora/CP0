@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{bdc3a84e-b1a1-415a-bf01-adb4cb458e32}</ProjectGuid>
-    <RootNamespace>Kompositionochaggregation</RootNamespace>
+    <ProjectGuid>{ccd023de-52ac-45aa-b448-99d1cf25e52c}</ProjectGuid>
+    <RootNamespace>Module3</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,13 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Driver.h" />
-    <ClInclude Include="Truck.h" />
+    <ClInclude Include="Box.h" />
+    <ClInclude Include="Cylinder.h" />
+    <ClInclude Include="Shape3D.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Driver.cpp" />
-    <ClCompile Include="TruckMain.cpp" />
-    <ClCompile Include="Truck.cpp" />
+    <ClCompile Include="Box.cpp" />
+    <ClCompile Include="Cylinder.cpp" />
+    <ClCompile Include="Shape3D.cpp" />
+    <ClCompile Include="TestingBoxCylinderShape3D.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

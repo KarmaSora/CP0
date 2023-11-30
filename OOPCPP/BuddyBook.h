@@ -8,7 +8,7 @@ class BuddyBook {
 private:
 	//implementera relationen Buddybook har 0 till "obegränsat" antal buddies
 
-	Buddy* *buddies;
+	Buddy* *buddies;	//compisition
 	int capacity;
 	int currentNrOfBuddies; 
 
