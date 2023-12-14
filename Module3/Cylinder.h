@@ -16,12 +16,14 @@ public:
 	void setOrientation(std::string orientaion);
 	std::string getOrientaion() const;
 	std::string toString() const; //överskuggar basklassen 
-	float BaseArea() const;
-	float volume() const;
+
 
 private:
 	float radius;
 	std::string orientaion;
+
+	// Inherited via Shape3D
+	float BaseArea() const override;
 };
 
 

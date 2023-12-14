@@ -34,15 +34,11 @@ float Box::getLength(float length)
 std::string Box::toString() const
 {
     return "Box: \n --lenght: " + std::to_string(this->length)+ "\n --Width: "
-        +std::to_string(this->width) + Shape3D::toString(); 
+        + std::to_string(this->width) + " \n " + Shape3D::toString();
 }
 
 float Box::BaseArea() const
 {
-    return this->width * this->length;
+    return this->length * this->width;
 }
 
-float Box::volume() const
-{
-    return this->BaseArea() * this->getHeight();
-}

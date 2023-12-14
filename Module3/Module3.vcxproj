@@ -127,15 +127,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BettysFiles\Shape3DHandler.h" />
     <ClInclude Include="Box.h" />
     <ClInclude Include="Cylinder.h" />
     <ClInclude Include="Shape3D.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BettysFiles\Shape3DHandler.cpp" />
+    <ClCompile Include="BettysFiles\TestShapeHandler.cpp" />
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="Cylinder.cpp" />
+    <ClCompile Include="DestructorTest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Shape3D.cpp" />
-    <ClCompile Include="TestingBoxCylinderShape3D.cpp" />
+    <ClCompile Include="TestingBoxCylinderShape3D.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

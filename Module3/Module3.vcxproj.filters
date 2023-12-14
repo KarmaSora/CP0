@@ -27,6 +27,15 @@
     <ClCompile Include="TestingBoxCylinderShape3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DestructorTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BettysFiles\Shape3DHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BettysFiles\TestShapeHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Box.h">
@@ -36,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Cylinder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BettysFiles\Shape3DHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

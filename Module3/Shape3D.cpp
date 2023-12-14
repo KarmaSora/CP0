@@ -30,15 +30,11 @@ std::string Shape3D::toString() const
 	return "Height: " + std::to_string(this->height);
 }
 
-float Shape3D::BaseArea() const
-{
-	return 0.0f;
 
-}
 
 float Shape3D::volume() const
 {
-	return this->BaseArea() * this->getHeight();
+	return this->BaseArea() * this->getHeight(); //dynamist bindning sker via anrop av functionen
 
 }
 

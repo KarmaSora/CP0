@@ -47,10 +47,6 @@ std::string Cylinder::toString() const
 
 float Cylinder::BaseArea() const
 {
-    return this->radius*this->radius*3.14;
+    return this->radius* this->radius *3.14f;
 }
 
-float Cylinder::volume() const
-{
-    return this->BaseArea()* this->getHeight();
-}

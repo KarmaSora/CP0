@@ -13,12 +13,15 @@ public:
 	float getLength(float length);
 
 	std::string toString() const;
-	float BaseArea() const;
-	float volume() const;
+
 
 private:
 	float width;
 	float length;
+
+
+	// Inherited via Shape3D
+	float BaseArea() const override;
 
 };
 
